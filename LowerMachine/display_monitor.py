@@ -13,7 +13,7 @@ import time
 
 # 导入自定义模块
 from page_monitor import MonitorPage
-from page_clock import ClockPage  # 第三步：解除时钟页面导入
+from page_trend import TrendPage  # 第三步：导入趋势页面
 from page_manager import PageManager
 
 class driver:
@@ -65,9 +65,9 @@ page_manager = PageManager()
 monitor_page = MonitorPage()
 page_manager.add_page(monitor_page)
 
-# 创建并添加时钟页面
-clock_page = ClockPage()
-page_manager.add_page(clock_page)
+# 创建并添加趋势页面
+trend_page = TrendPage()
+page_manager.add_page(trend_page)
 
 # 加载第一个页面
 page_manager.load_current_page()
